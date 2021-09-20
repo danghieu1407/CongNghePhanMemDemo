@@ -426,14 +426,7 @@ a:hover figcaption { color: #056767; }
 .tm-contact-form label { font-size: 1.4rem; }
 .tm-contact-form .form-group { display: flex; }
 
-@media (max-width: 1540px) {
-    .tm-header { width: 320px; }
 
-    .tm-main {
-        margin-left: 320px;
-        width: calc(100% - 320px);
-    }
-}
 
 @media (max-width: 1300px) {
     .tm-about-col {
@@ -460,57 +453,7 @@ a:hover figcaption { color: #056767; }
 }
 
 /* Hide sidebar */
-@media (max-width: 991px) {
-    .tm-header {
-        width: 320px;
-        left: -320px;        
-        transition: all 0.3s ease;
-    }
 
-    .tm-header.show { left: 0; }
-    .tm-header-wrapper { padding: 15px; }
-
-    .navbar-toggler {
-        display: block;
-        position: fixed;
-        left: 0;
-        top: 0;
-        background-color: rgba(56, 204, 204, 0.75);
-        color: white;
-        padding: 10px 15px;
-        transition: all 0.3s ease;
-        border-radius: 0;
-        top: 5px;
-    }
-
-    .tm-header.show .navbar-toggler { left: 320px; }
-
-    .tm-main {
-        margin-left: 0;
-        padding: 50px 40px;
-        width: 100%;
-    }
-
-    .tm-post-sidebar {
-        margin-left: 0;
-        margin-right: auto;
-    }
-
-    .tm-person-col { width: 50%; }
-    .tm-person { flex-direction: row; }
-
-    .tm-contact-left {
-        flex: 0 0 58.333333%;
-        max-width: 58.333333%;
-    }
-
-    .tm-contact-right {
-        flex: 0 0 41.666667%;
-        max-width: 41.666667%;
-    }
-
-    .tm-post-full { max-width: none; }
-}
 
 @media (max-width: 767px) {
     .form-inline .form-control.tm-search-input {
