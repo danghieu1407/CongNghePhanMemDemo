@@ -477,3 +477,26 @@ a:hover figcaption { color: #056767; }
 li.tm-nav-item:hover{
     opacity: 0.8;
 }
+table {
+    box-shadow: 8px 4px 8px 4px #00000033;
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 100%;
+    border-collapse: collapse !important;
+    text-align: center;
+}
+
+table th {
+    font-size: 20px;
+    height: 70px;
+}
+
+table td {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+tr:hover:not(.header) {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
