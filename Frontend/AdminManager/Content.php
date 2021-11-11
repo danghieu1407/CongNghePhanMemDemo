@@ -1,4 +1,5 @@
 
+
 <?php
     if(isset($_GET['manage']))
         {
@@ -19,7 +20,6 @@
         }
 
 
-   
         if ($manage=="RoomManage")
         {
           include('ContentPage/RoomManager.php');
@@ -32,7 +32,12 @@
         {
             include('ContentPage/RoomOdered.php');
         }
-        
+       
+        else if ($manage=="managementStaff")
+        {
+          include('ContentPage/managementStaff.php');
+
+        }
         else
         {
           include('ContentPage/RoomManager.php');
