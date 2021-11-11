@@ -1,3 +1,5 @@
+
+
 <?php
     if(isset($_GET['manage']))
         {
@@ -18,7 +20,6 @@
         }
 
 
-   
         if ($manage=="RoomManage")
         {
           include('ContentPage/RoomManager.php');

@@ -68,9 +68,10 @@
                     </form>
                 </div>                
             </div> 
-            <?php
-                include("AdminManager/Content.php")
-            ?>          
+            <?php 
+               include("../config/config.php");
+            ?>
+            <?php include 'AdminManager/Content.php'; ?>          
         </main>
     </div>
     
