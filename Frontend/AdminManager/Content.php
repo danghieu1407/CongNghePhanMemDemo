@@ -32,6 +32,7 @@
         {
             include('ContentPage/RoomOdered.php');
         }
+        
         else
         {
           include('ContentPage/RoomManager.php');
