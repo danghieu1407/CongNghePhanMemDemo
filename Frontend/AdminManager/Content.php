@@ -24,9 +24,9 @@
         {
           include('ContentPage/RoomManager.php');
         }
-        else if($manage=="RoomSetting")
+        else if($manage=="customerManager")
         {
-            include('ContentPage/RoomSetting.php');
+            include('ContentPage/customerManager.php');
         }
         else if($manage=="RoomOdered")
         {

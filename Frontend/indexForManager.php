@@ -33,22 +33,20 @@
                         <i class="fas fa-home"></i>
                         Quản lý Phòng
                     </a></li>
-                    <li class="tm-nav-item active"><a href="indexForManager.php?manage=RoomOdered" class="tm-nav-link">
-                        <i class="fas fa-home"></i>
-                        Phòng đặt
-                    </a></li>
-                    <li class="tm-nav-item active"><a href="#" class="tm-nav-link">
-                        <i class="fas fa-home"></i>
-                        Kênh chat 
-                    </a></li>
-                    <li class="tm-nav-item active"><a href="indexForManager.php?manage=RoomSetting" class="tm-nav-link">
-                        <i class="fas fa-home"></i>
-                        Chỉnh sửa phòng
-                    </a></li>
                     <li class="tm-nav-item active"><a href="indexForManager.php?manage=managementStaff" class="tm-nav-link">
                         <i class="fas fa-home"></i>
                         Quản lí nhân viên
                     </a></li>
+                    <li class="tm-nav-item active"><a href="indexForManager.php?manage=customerManager" class="tm-nav-link">
+                        <i class="fas fa-home"></i>
+                        Quản lí khách hàng
+                    </a></li>
+                    <li class="tm-nav-item active"><a href="#" class="tm-nav-link">
+                        <i class="fas fa-home"></i>
+                      Sau này sẽ thêm
+                    </a></li>
+                    
+                    
                   
                   
                 </ul>
@@ -58,16 +56,7 @@
     <div class="container-fluid">
         <main class="tm-main">
             <!-- Search form -->
-            <div class="row tm-row">
-                <div class="col-12">
-                    <form method="GET" class="form-inline tm-mb-80 tm-search-form">                
-                        <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
-                        <button class="tm-search-button" type="submit">
-                            <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
-                        </button>                                
-                    </form>
-                </div>                
-            </div> 
+             
             <?php 
                include("../config/config.php");
             ?>
