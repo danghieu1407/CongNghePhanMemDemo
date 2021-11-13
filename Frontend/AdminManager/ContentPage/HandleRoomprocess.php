@@ -36,15 +36,25 @@ if (isset($_POST['Cost'])) {
 } else {
     $Cost = '';
 }
-if (isset($_FILES['Image'])) {
-    $Image = "../images/" . $_FILES['Image']['name'];
-    $Image_tmp = $_FILES['Image']['tmp_name'];
-    $Path = "images/" . $_FILES['Image']['name'];
+
+if (isset($_POST['FloorRoom'])) {
+    $FloorRoom = $_POST['FloorRoom'];
 } else {
-    $Image = "";
+    $FloorRoom = '';
 }
 
- if (isset($_POST['Setting'])) {
+
+if (isset($_FILES['Image'])) {
+    $Image = "../images/" . $_FILES['Image']['name'];
+    $Image_tmp =  $_FILES['Image']['tmp_name'];
+    $Path = "../../../images/" . $_FILES['Image']['name'];
+} else {
+    $Image = "";
+    $Image_tmp = "";
+    $Path =  "";
+}
+
+if (isset($_POST['Setting'])) {
     $TMP = $_FILES['Image']['name'];
     if ($TMP != '') {
         $sql_update = "UPDATE room SET
@@ -55,7 +65,7 @@ if (isset($_FILES['Image'])) {
             room.Details='$Details'
             WHERE ID = '$IDRoom' ";
         mysqli_query($mysqli, $sql_update);
-        move_uploaded_file($Image_tmp, $Path);
+        move_uploaded_file($Image_tmp,$Path);
         header('Location:../../indexForManager.php?manage=RoomDetail&IDRoom=' . $IDRoom);
     } else {
         $sql_update = "UPDATE room SET
@@ -74,9 +84,14 @@ if (isset($_FILES['Image'])) {
     mysqli_query($mysqli, $sql_delete);
     header('Location:../../indexForManager.php');
 } else if (isset($_POST['ChangeStatus'])) {
-   
-        $sql_update = "UPDATE room SET
-         room.Status = '1'  WHERE ID = '$IDRoom' ";
-        mysqli_query($mysqli, $sql_update);
-    header('Location:../../indexForManager.php?manage=RoomDetail&IDRoom=' . $IDRoom); 
+
+    $sql_update = "UPDATE room SET room.Status = '1'  WHERE ID = '$IDRoom' ";
+    mysqli_query($mysqli, $sql_update);
+    header('Location:../../indexForManager.php?manage=RoomDetail&IDRoom='.$IDRoom);
+} elseif (isset($_POST['AddRoom'])) {
+
+    $sql = "INSERT INTO room (NumRoom,room.status, room.Type, Details, Cost, room.Image, room.FloorRoom) VALUES ('$NumRoom','1','$Type','$Details','$Cost','$Image','$FloorRoom')";
+    mysqli_query($mysqli, $sql);
+    move_uploaded_file($Image_tmp, $Path);
+    header('Location:../../indexForManager.php');
 }

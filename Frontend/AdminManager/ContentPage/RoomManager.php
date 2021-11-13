@@ -2,7 +2,7 @@
 $sql_room1 = 'SELECT * FROM room WHEre FloorRoom =1 order by NumRoom';
 $query_room1 = mysqli_query($mysqli, $sql_room1);
 ?>
-<div class="btn btn-success">Thêm Phòng</div>
+<a class="btn btn-success" href="indexForManager.php?manage=AddRoom">Thêm Phòng</a>
 <div class="row tm-row ">
                 <h1> Tầng 1</h1>
                 <?php while ($row_pro = mysqli_fetch_array($query_room1)) { ?>
