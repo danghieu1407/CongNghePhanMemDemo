@@ -53,6 +53,15 @@
         {
           include('ContentPage/HandleRoomprocess.php');
         }
+        else if($manage == "staffDetail")
+        {
+          include('ContentPage/staffDetail.php');
+        }
+        else if($manage = "changeDetailStaff")
+        {
+          include('ContentPage/changeStaffDetail.php');
+          
+        }
         else
         {
           include('ContentPage/RoomManager.php');

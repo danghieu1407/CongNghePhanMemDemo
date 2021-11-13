@@ -36,7 +36,7 @@ if (isset($_POST['Cost'])) {
 } else {
     $Cost = '';
 }
-if (isset($_POST['Image'])) {
+if (isset($_FILES['Image'])) {
     $Image = "../images/" . $_FILES['Image']['name'];
     $Image_tmp = $_FILES['Image']['tmp_name'];
     $Path = "images/" . $_FILES['Image']['name'];
