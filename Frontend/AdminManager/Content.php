@@ -48,11 +48,13 @@
           include('ContentPage/SettingRoom.php');
 
         }
-
-        else if ($action=="DeleteRoom")
+        else if ($manage=="AddRoom")
         {
-          include('ContentPage/HandleRoomprocess.php');
+          include('ContentPage/AddRoom.php');
+
         }
+
+        
         else
         {
           include('ContentPage/RoomManager.php');
