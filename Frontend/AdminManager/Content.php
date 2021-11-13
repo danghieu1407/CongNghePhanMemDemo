@@ -24,7 +24,7 @@
         {
           include('ContentPage/RoomManager.php');
         }
-        else if($manage=="customerManager")
+        else if($manage=="storeManager")
         {
             include('ContentPage/customerManager.php');
         }
@@ -37,6 +37,21 @@
         {
           include('ContentPage/managementStaff.php');
 
+        }
+        else if ($manage=="RoomDetail")
+        {
+          include('ContentPage/RoomDetail.php');
+
+        }
+        else if ($manage=="SettingRoom")
+        {
+          include('ContentPage/SettingRoom.php');
+
+        }
+
+        else if ($action=="DeleteRoom")
+        {
+          include('ContentPage/HandleRoomprocess.php');
         }
         else
         {

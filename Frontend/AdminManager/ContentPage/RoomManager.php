@@ -1,15 +1,17 @@
 <?php
-$sql_room1 = 'SELECT * FROM room WHEre FloorRoom =1';
+$sql_room1 = 'SELECT * FROM room WHEre FloorRoom =1 order by NumRoom';
 $query_room1 = mysqli_query($mysqli, $sql_room1);
 ?>
-
+<div class="btn btn-success">Thêm Phòng</div>
 <div class="row tm-row ">
                 <h1> Tầng 1</h1>
                 <?php while ($row_pro = mysqli_fetch_array($query_room1)) { ?>
 
                 <article class="col-12 col-md-6 tm-post">
                     <hr class="tm-hr-primary">
-                    <a href="#" class="effect-lily tm-post-link tm-pt-60">
+                    <a href="indexForManager.php?manage=RoomDetail&IDRoom=<?php echo $row_pro[
+                        'ID'
+                    ]; ?>" class="effect-lily tm-post-link tm-pt-60">
                         <div class="tm-post-link-inner">
                             <img src="<?php echo $row_pro[
                                 'Image'
@@ -51,7 +53,9 @@ $query_room1 = mysqli_query($mysqli, $sql_room1);
 
 <article class="col-12 col-md-6 tm-post">
     <hr class="tm-hr-primary">
-    <a href="#" class="effect-lily tm-post-link tm-pt-60">
+    <a href="indexForManager.php?manage=RoomDetail&IDRoom=<?php echo $row_pro[
+        'ID'
+    ]; ?>" class="effect-lily tm-post-link tm-pt-60">
         <div class="tm-post-link-inner">
             <img src="<?php echo $row_pro[
                 'Image'
@@ -81,6 +85,4 @@ $query_room1 = mysqli_query($mysqli, $sql_room1);
     
 </article>
 <?php } ?> 
-               
-              
-            </div>
+</div>
