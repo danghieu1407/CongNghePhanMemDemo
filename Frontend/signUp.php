@@ -21,11 +21,18 @@
             </div>
             <div class="input">
                 <form action="../Backend/singUpProcess.php" method="POST">
-                    <input type="text" name="Username" placeholder="Tên khách hàng đặt phòng" required>
-                    <input type="password" name="Password" placeholder="Mật khẩu" required>
-                    <!-- <span style="font-size:15px; color:red"></span> -->
-                    <input type="text" name="Email" placeholder="Địa chỉ email" required>
-                    <input type="text" name="phoneNumber" placeholder="Số điện thoại di động" required>
+                    <input type="text" name="Name" placeholder="Vui Lòng Nhập Tên" required>
+                    <input type="text" name="email" placeholder="Địa chỉ email" required>
+                    <input type="password" name="pass" placeholder="Mật khẩu" required>
+                    <input type="text" name="CMND" placeholder="Số chứng minh thư" required>
+                    <input type="text" name="Age" placeholder="Tuổi" required>
+                    <input type="text" name="Work" placeholder="Công việc hiện tại" required>
+                    <input type="text" name="Address" placeholder="Nơi ở, địa chỉ nhà" required>
+                    <input type="text" name="NumberPhone" placeholder="Số điện thoại di động" required>
+
+                    
+                    
+
                     <div class="text-danger small text-left mt-3">
                             <span id="errorMessage"><?php if (isset($_GET["msg1"])) echo $_GET["msg1"]; ?></span></td>
                         </div>

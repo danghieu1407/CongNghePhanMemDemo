@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2021 at 06:58 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Generation Time: Nov 14, 2021 at 12:01 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -47,6 +47,32 @@ INSERT INTO `accounts` (`id`, `username`, `pass`, `email`, `PhoneNumber`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `customer`
+--
+
+CREATE TABLE `customer` (
+  `ID` int(11) NOT NULL,
+  `Name` text NOT NULL,
+  `email` text NOT NULL,
+  `pass` text NOT NULL,
+  `CMND` varchar(10) NOT NULL,
+  `Wallet` int(11) NOT NULL DEFAULT 0,
+  `Age` tinyint(4) NOT NULL,
+  `Work` text NOT NULL,
+  `Address` text NOT NULL,
+  `NumberPhone` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`ID`, `Name`, `email`, `pass`, `CMND`, `Wallet`, `Age`, `Work`, `Address`, `NumberPhone`) VALUES
+(4, 'Cao Bảo Thái', 'cbt270801@gmail.com', '123456', '352583490', 0, 20, 'Lập Trình Viên', 'An Giang', '0972707663');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `room`
 --
 
@@ -66,42 +92,22 @@ CREATE TABLE `room` (
 --
 
 INSERT INTO `room` (`ID`, `NumRoom`, `Status`, `Type`, `Details`, `Cost`, `Image`, `FloorRoom`) VALUES
-(1, 'Room 1012', 1, 1, 'VIP', 500, '../images/Screenshot_2021-10-20_141507.jpg', 1),
-(2, 'Room 102', 2, 2, 'Vip', 300, '../images/img2.png', 1),
-(3, 'Room 103', 0, 2, 'Vip', 300, '../images/img3.png', 1),
-(4, 'Room 203', 0, 2, 'Vip', 300, '../images/img3.png', 2);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `staff`
---
-
-CREATE TABLE `staff` (
-  `id` int(11) NOT NULL,
-  `name` text NOT NULL,
-  `phonenumber` text NOT NULL,
-  `salary` int(11) NOT NULL,
-  `regency` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `staff`
---
-
-INSERT INTO `staff` (`id`, `name`, `phonenumber`, `salary`, `regency`) VALUES
-(1, 'Baor thai', '0947072684', 2000000, 'Bao Ve'),
-(2, 'dang hieu', '0976054369', 2000000, 'Le Tan');
+(2, 'Room 104', 1, 1, 'Vip', 300000, '../images/img5.jpg', 1),
+(3, 'Room 103', 1, 2, 'Vip', 300, '../images/img3.png', 1),
+(4, 'Room 203', 1, 1, 'Vip', 300, '../images/img5.jpg', 2),
+(11, 'Room 202', 1, 1, 'sas', 600000, '../images/img5.jpg', 2),
+(12, 'Room 204', 1, 4, 'SSSS', 600000, '../images/img6.jpg', 2),
+(13, 'Room 101', 1, 4, 'Phòng 101 \r\nDịch Vụ:.....\r\nbla \r\nbla\r\nbla', 600000, '../images/received_431670541453342.webp', 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `accounts`
+-- Indexes for table `customer`
 --
-ALTER TABLE `accounts`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `room`
@@ -110,32 +116,20 @@ ALTER TABLE `room`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `staff`
---
-ALTER TABLE `staff`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `accounts`
+-- AUTO_INCREMENT for table `customer`
 --
-ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `customer`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `staff`
---
-ALTER TABLE `staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
