@@ -56,6 +56,10 @@
           include('ContentPage/changeStaffDetail.php');
           
         }
+        else if ($manage ="AddStaff")
+        {
+          include('ContentPage/AddStaff.php');
+        }
 
         
         else

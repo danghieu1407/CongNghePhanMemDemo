@@ -59,6 +59,10 @@ if(isset($_POST['SaveChange'])){
     $sql_delete = "DELETE FROM staff where id = '$IDStaff'";
     mysqli_query($mysqli,$sql_delete);
     header('Location:../../indexForManager.php?=manage=ChangeDetailStaff.php');
+    
+    else if(isset($_POST['AddStaff'])){
+        
+    }
 }
 
 
