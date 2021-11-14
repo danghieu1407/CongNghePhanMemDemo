@@ -56,8 +56,6 @@
           include('ContentPage/changeStaffDetail.php');
           
         }
-
-        
         else
         {
           include('ContentPage/RoomManager.php');

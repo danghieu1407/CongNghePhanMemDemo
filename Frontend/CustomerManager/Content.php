@@ -26,6 +26,10 @@
         {
             include('ContentPage/AddPayment.php');
         }
+        else if($manage=="RoomDetail")
+        {
+            include('ContentPage/RoomDetail.php');
+        }
         
 
         
