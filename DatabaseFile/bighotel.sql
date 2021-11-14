@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2021 at 12:01 PM
+-- Generation Time: Nov 14, 2021 at 12:29 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -99,6 +99,20 @@ INSERT INTO `room` (`ID`, `NumRoom`, `Status`, `Type`, `Details`, `Cost`, `Image
 (12, 'Room 204', 1, 4, 'SSSS', 600000, '../images/img6.jpg', 2),
 (13, 'Room 101', 1, 4, 'Phòng 101 \r\nDịch Vụ:.....\r\nbla \r\nbla\r\nbla', 600000, '../images/received_431670541453342.webp', 1);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff`
+--
+
+CREATE TABLE `staff` (
+  `id` int(11) NOT NULL,
+  `name` int(11) NOT NULL,
+  `phonenumber` text NOT NULL,
+  `salary` int(11) NOT NULL,
+  `regency` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indexes for dumped tables
 --
@@ -116,6 +130,12 @@ ALTER TABLE `room`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `staff`
+--
+ALTER TABLE `staff`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -130,6 +150,12 @@ ALTER TABLE `customer`
 --
 ALTER TABLE `room`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `staff`
+--
+ALTER TABLE `staff`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

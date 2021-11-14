@@ -1,0 +1,1 @@
+Đây là trang phòng đang đặt hoặc chờ đặt

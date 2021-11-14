@@ -10,16 +10,6 @@
         $manage='';
         }
 
-    if(isset($_GET['action']))
-        {
-        $action = $_GET['action'];
-        }
-    else
-        {
-        $action='';
-        }
-
-
         if ($manage=="RoomManage")
         {
           include('ContentPage/RoomManager.php');
