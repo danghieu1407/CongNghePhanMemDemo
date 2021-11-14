@@ -488,7 +488,10 @@ table {
 
 table th {
     font-size: 20px;
-    height: 70px;
+    height: 71px;
+    width: 16px;
+    align-content: center;
+    max-width: 60px;
 }
 
 table td {

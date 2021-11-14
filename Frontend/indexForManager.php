@@ -41,7 +41,7 @@
                         <i class="fas fa-home"></i>
                         Quản lí khách hàng
                     </a></li>
-                    <li class="tm-nav-item active"><a href="indexForManager.php?manage=RoomOrder" class="tm-nav-link">
+                    <li class="tm-nav-item active"><a href="#" class="tm-nav-link">
                         <i class="fas fa-home"></i>
                         Quản lí đặt phòng
                     </a></li>

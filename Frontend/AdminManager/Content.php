@@ -56,7 +56,15 @@
         else if ($manage=="CustomerDetails")
         {
           include('ContentPage/CustomerDetails.php');
-
+        }
+        else if($manage == "staffDetail")
+        {
+          include('ContentPage/staffDetail.php');
+        }
+        else if($manage = "changeDetailStaff")
+        {
+          include('ContentPage/changeStaffDetail.php');
+          
         }
 
         
