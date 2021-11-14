@@ -2,7 +2,11 @@
 $sql_staff = 'SELECT * FROM staff';
 $query_staff = mysqli_query($mysqli, $sql_staff);
 ?>
+<<<<<<< HEAD
 <a class="btn btn-success" href="indexForManager.php?manage=AddStaff">Thêm Phòng</a>
+=======
+ <a href="indexForManager.php?manage=addStaff" class="btn btn-success">Thêm nhân viên</a>
+>>>>>>> b14f09daf0a8f3fc06109ade77c22dd2eea0396b
 
 <table>
     <tr>
@@ -14,33 +18,33 @@ $query_staff = mysqli_query($mysqli, $sql_staff);
 
 
     </tr>
-</table>
-<br>
-<br>
+
+
 
 <?php while ($row_pro = mysqli_fetch_array($query_staff)) {?>
 
 <div class="Staff">
-                <table>
+                
                    
-                    <tr class="tr-Staff">
-                        <th name="nameStaff" ><?php echo $row_pro[
+                    <tr>
+                        
+                        <td name="name" ><?php echo $row_pro[
                             'name'
-                        ]; ?></th>
-                        <th name="staffPhoneNumber"><?php echo $row_pro[
+                        ]; ?></td>
+                        <td name="phonenumber"><?php echo $row_pro[
                             'phonenumber'
-                        ]; ?> </th>
-                        <th name ="salary"><?php echo $row_pro[
+                        ]; ?> </td>
+                        <td name ="salary"><?php echo $row_pro[
                             'salary'
-                        ]; ?></th>
-                        <th name = "regency"><?php echo $row_pro[
+                        ]; ?></td>
+                        <td name = "regency"><?php echo $row_pro[
                             'regency'
-                        ]; ?></th>
-                        <th > 
+                        ]; ?></td>
+                        <td > 
                             
                       <a href="indexForManager.php?manage=staffDetail&IDStaff=<?php echo $row_pro['id']; ?>" >Chỉnh sửa</a>
 
-                        </th>
+                        </td>
                     </tr>
         
                 </table>
