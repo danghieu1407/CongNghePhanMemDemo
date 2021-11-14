@@ -51,14 +51,14 @@
         {
           include('ContentPage/staffDetail.php');
         }
-        else if($manage = "changeDetailStaff")
+        else if($manage == "changeDetailStaff")
         {
           include('ContentPage/changeStaffDetail.php');
           
         }
-        else if ($manage ="AddStaff")
+        else if ($manage =="addStaff")
         {
-          include('ContentPage/AddStaff.php');
+          include('ContentPage/addStaff.php');
         }
 
         
