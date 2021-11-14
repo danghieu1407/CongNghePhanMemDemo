@@ -1,5 +1,7 @@
  <?php
+ session_start();
  include('../config/config.php');
+        
      if(isset($_POST['Login']))
      {
          $Email = $_POST['Email'];
@@ -12,7 +14,8 @@
          {
             
              $_SESSION['Login'] = $Email;
-             header("Location:../Frontend/Bookingroom.html");
+             
+             header("Location:../Frontend/bookingroom.php");
          }
          else
          { 

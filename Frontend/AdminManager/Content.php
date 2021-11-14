@@ -51,11 +51,18 @@
         {
           include('ContentPage/staffDetail.php');
         }
-        else if($manage = "changeDetailStaff")
+        else if($manage == "changeDetailStaff")
         {
           include('ContentPage/changeStaffDetail.php');
           
         }
+        else if($manage=="AddStaff")
+        {
+          include('ContentPage/AddStaff.php');
+          
+        }
+        
+        
         else
         {
           include('ContentPage/RoomManager.php');

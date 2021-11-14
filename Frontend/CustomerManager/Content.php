@@ -30,9 +30,6 @@
         {
             include('ContentPage/RoomDetail.php');
         }
-        
-
-        
         else
         {
           include('ContentPage/OrderRoom.php');

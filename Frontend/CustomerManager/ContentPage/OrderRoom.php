@@ -24,9 +24,11 @@ $query_room1 = mysqli_query($mysqli, $sql_room1);
         <div class="d-flex justify-content-between tm-pt-45">
             <span class="tm-color-primary"></span>
             <span class="tm-color-primary"></span>
+
+
         </div>
 
-        
+
     </article>
     <?php }?>
 </div>
@@ -58,7 +60,7 @@ $query_room2 = mysqli_query($mysqli, $sql_room2);
             <span class="tm-color-primary"></span>
             <span class="tm-color-primary"></span>
         </div>
-
+        
     </article>
 <?php }?>
 </div>

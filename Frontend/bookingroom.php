@@ -1,3 +1,30 @@
+<?php session_start();
+if (!isset($_SESSION['Login']))
+{
+    header('Location:login.php');
+} ?>
+
+
+<?php
+include ("../Config/config.php");
+if (isset($_GET['Log']) && $_GET['Log'] == 3) {
+    unset($_SESSION['Login']);
+    header("Location:login.php");
+}
+?>
+
+<?php
+
+ if(isset($_SESSION['Login'])) 
+{
+    $Email = $_SESSION['Login'] ;
+    $sql_level = "SELECT * FROM customer WHERE email='$Email' LIMIT 1";
+    $query_level = mysqli_query($mysqli, $sql_level);
+    $user = mysqli_fetch_array($query_level);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,10 +50,10 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="tm-site-header">
-                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>            
-                <h1 class="text-center">Username</h1>
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
+                <h1 class="text-center"><?php echo $user['Name'] ?></h1>
             </div>
-            <nav class="tm-nav" id="tm-nav">            
+            <nav class="tm-nav" id="tm-nav">
                 <ul>
                     <li class="tm-nav-item active"><a href="bookingroom.php?manage=OrderRoom" class="tm-nav-link">
                         <i class="fas fa-home"></i>
@@ -44,31 +71,29 @@
                         <i class="fas fa-home"></i>
                         Chỉnh Sửa Thông Tin
                     </a></li>
-                    
+
                     <li class="tm-nav-item active"><a href="bookingroom.php?manage=AddPayment" class="tm-nav-link">
                         <i class="fas fa-home"></i>
                         Thêm tiền
                     </a></li>
-                    <li class="tm-nav-item active"><a href="#" class="tm-nav-link">
+                    <li class="tm-nav-item active"><a  href="?Log=3" class="tm-nav-link">
                         <i class="fas fa-home"></i>
                         Đăng Xuất
                     </a></li>
-                  
-                  
+
+
                 </ul>
             </nav>
-      
+
     </header>
     < <div class="container-fluid">
         <main class="tm-main">
             <!-- Search form -->
-             
-            <?php 
-               include("../config/config.php");
-            ?>
-            <?php include 'CustomerManager/Content.php'; ?>          
+
+
+            <?php include 'CustomerManager/Content.php';?>
         </main>
     </div>
-    
+
 </body>
 </html>

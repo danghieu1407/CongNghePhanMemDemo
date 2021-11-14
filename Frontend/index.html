@@ -1,3 +1,9 @@
+<?php session_start();
+if (!isset($_SESSION['Login']))
+{
+    header('Location:login.php');
+} 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +41,7 @@
                 </div>
             </div>
             <div class="Go-Menu">
-                <a href="bookingroom.html">Đặt phòng khách sạn</a>
+                <a href="bookingroom.php">Đặt phòng khách sạn</a>
             </div>
             <div id="dot" style="text-align:center">
                 <span class="dot"></span>

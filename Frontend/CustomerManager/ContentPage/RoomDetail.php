@@ -12,7 +12,7 @@ $query_Detail = mysqli_query($mysqli, $sql_RoomDetail);
                         <div class="tm-post-link-inner">
                             <img src="<?php echo $row_pro['Image']; ?>" alt="Image" class="img-fluid">
                         </div>
-                        <span class="position-absolute tm-new-badge">  
+                        <span class="position-absolute tm-new-badge">
                                 Còn phòng
                         </span>
 
@@ -38,12 +38,13 @@ $query_Detail = mysqli_query($mysqli, $sql_RoomDetail);
                         <span class="tm-color-primary"></span>
                     </div>
 
+
+                    <form method="POST" action="#"  enctype="multipart/form-data">
+                        <input class="form-control" type="text" name="IDRoom" value="<?php echo $row_pro['ID'] ?>" required hidden>
+                        <button type="submit" class="btn btn-success" >Đặt Phòng</button>
+                    </form>
+
                 </div>
-
-               
-
-
-
 <?php }
 ?>
 
