@@ -2,11 +2,7 @@
 $sql_staff = 'SELECT * FROM staff';
 $query_staff = mysqli_query($mysqli, $sql_staff);
 ?>
-<<<<<<< HEAD
-<a class="btn btn-success" href="indexForManager.php?manage=AddStaff">Thêm Phòng</a>
-=======
  <a href="indexForManager.php?manage=addStaff" class="btn btn-success">Thêm nhân viên</a>
->>>>>>> b14f09daf0a8f3fc06109ade77c22dd2eea0396b
 
 <table>
     <tr>

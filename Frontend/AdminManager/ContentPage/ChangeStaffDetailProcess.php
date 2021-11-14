@@ -38,15 +38,10 @@ if (isset($_POST['regency'])) {
     $regency = "";
 }
 
-<<<<<<< HEAD
-if (isset($_POST['SaveChange'])) {
-    $sql_update = "UPDATE staff SET
-=======
 
 
 if(isset($_POST['SaveChange'])){
     $sql_update ="UPDATE staff SET
->>>>>>> b14f09daf0a8f3fc06109ade77c22dd2eea0396b
     staff.name = '$name',
     staff.phonenumber = '$phonenumber',
     staff.salary = '$salary',
@@ -60,10 +55,6 @@ if(isset($_POST['SaveChange'])){
     header('Location:../../indexForManager.php?=manage=ChangeDetailStaff.php');
 } else if (isset($_POST['AddStaff'])) {
     header('Location:../../indexForManager.php?=manage=ChangeDetailStaff.php');
-<<<<<<< HEAD
-}
-?>
-=======
     }
     else if(isset($_POST['AddStaff'])){
    
@@ -82,4 +73,3 @@ if(isset($_POST['SaveChange'])){
 
 
 ?>
->>>>>>> b14f09daf0a8f3fc06109ade77c22dd2eea0396b
