@@ -78,7 +78,7 @@ if (isset($_GET['Log']) && $_GET['Log'] == 3) {
                     </a></li>
                     <li class="tm-nav-item active"><a  href="?Log=3" class="tm-nav-link">
                         <i class="fas fa-home"></i>
-                        Đăng Xuất
+                        Đăng Xuất <?php echo $user['Name'] ?>
                     </a></li>
 
 

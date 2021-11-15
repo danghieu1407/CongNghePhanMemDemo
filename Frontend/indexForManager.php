@@ -1,4 +1,28 @@
+<?php session_start();
+if (!isset($_SESSION['Login']))
+{
+    header('Location:login.php');
+} ?>
 
+
+<?php
+include ("../Config/config.php");
+if (isset($_GET['Log']) && $_GET['Log'] == 3) {
+    unset($_SESSION['Login']);
+    header("Location:login.php");
+}
+?>
+
+<?php
+
+ if(isset($_SESSION['Login'])) 
+{
+    $Email = $_SESSION['Login'] ;
+    $sql_level = "SELECT * FROM accounts WHERE email='$Email' LIMIT 1";
+    $query_level = mysqli_query($mysqli, $sql_level);
+    $user = mysqli_fetch_array($query_level);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +49,7 @@
             </button>
             <div class="tm-site-header">
                 <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>            
-                <h1 class="text-center">Admin</h1>
+                <h1 class="text-center">Xin Chào <?php echo $user['username']?></h1>
             </div>
             <nav class="tm-nav" id="tm-nav">            
                 <ul>
@@ -45,9 +69,9 @@
                         <i class="fas fa-home"></i>
                         Quản lí đặt phòng
                     </a></li>
-                    <li class="tm-nav-item active"><a href="#" class="tm-nav-link">
+                    <li class="tm-nav-item active"><a  href="?Log=3" class="tm-nav-link">
                         <i class="fas fa-home"></i>
-                      Đăng Xuất
+                        Đăng Xuất: <?php echo $user['username'] ?>
                     </a></li>
                     
                     
