@@ -29,6 +29,8 @@
                         </div>
                     <input type="submit" name="Login" value="Đăng Nhập">
                     <a href="signUp.php">Chưa có tài khoản</a>
+                    | <a href="index.html">Trang chủ</a>
+
 
                         
                 </form>
