@@ -30,6 +30,11 @@
         {
             include('ContentPage/RoomDetail.php');
         }
+        else if($manage=="addInfobooking")
+        {
+            include('ContentPage/addInfobooking.php');
+        }
+        
         else
         {
           include('ContentPage/OrderRoom.php');

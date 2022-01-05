@@ -13,13 +13,18 @@ $query_room1 = mysqli_query($mysqli, $sql_room1);
                 <img src="<?php echo $row_pro['Image']; ?>" alt="Image" class="img-fluid">
             </div>
             <span class="position-absolute tm-new-badge">
-                Còn Phòng
+            <?php if ($row_pro['Status'] == 1) {?>
+                                Còn phòng
+                            <?php } elseif ($row_pro['Status'] == 0) {?>
+                                Hết Phòng
+                            <?php } elseif ($row_pro['Status'] == 2) {?>
+                                Đang Bảo Trì
+                            <?php }?>
             </span>
 
             <h2 class="tm-pt-30 tm-color-primary tm-post-title"><?php echo $row_pro['NumRoom']; ?></h2>
         </a>
-        <p class="tm-pt-30">
-
+        <p class="tm-pt-30"> 
         </p>
         <div class="d-flex justify-content-between tm-pt-45">
             <span class="tm-color-primary"></span>
@@ -48,7 +53,13 @@ $query_room2 = mysqli_query($mysqli, $sql_room2);
                 <img src="<?php echo $row_pro['Image']; ?>" alt="Image" class="img-fluid">
             </div>
             <span class="position-absolute tm-new-badge">
-                Còn Phòng
+            <?php if ($row_pro['Status'] == 1) {?>
+                                Còn phòng
+                            <?php } elseif ($row_pro['Status'] == 0) {?>
+                                Hết Phòng
+                            <?php } elseif ($row_pro['Status'] == 2) {?>
+                                Đang Bảo Trì
+                            <?php }?>
             </span>
 
             <h2 class="tm-pt-30 tm-color-primary tm-post-title"><?php echo $row_pro['NumRoom']; ?></h2>

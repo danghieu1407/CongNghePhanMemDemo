@@ -60,6 +60,26 @@
         {
           include('ContentPage/addStaff.php');
         }
+        else if ($manage =="manageBookingRoom")
+        {
+          include('ContentPage/manageBookingRoom.php');
+        }
+        else if ($manage =="bookingRoomDetail")
+        {
+          include('ContentPage/bookingRoomDetail.php');
+        }
+        else if ($manage =="payment")
+        {
+          include('ContentPage/payment.php');
+        }
+        else if ($manage =="bill")
+        {
+          include('ContentPage/bill.php');
+        }
+    
+    
+    
+        
         
         
         else

@@ -37,9 +37,8 @@ $query_Detail = mysqli_query($mysqli, $sql_RoomDetail);
                         <span class="tm-color-primary"></span>
                         <span class="tm-color-primary"></span>
                     </div>
-
-
-                    <form method="POST" action="#"  enctype="multipart/form-data">
+                    
+                    <form method="POST" action="bookingroom.php?manage=addInfobooking&IDRoom=<?php echo $row_pro['ID']; ?>"  enctype="multipart/form-data">
                         <input class="form-control" type="text" name="IDRoom" value="<?php echo $row_pro['ID'] ?>" required hidden>
                         <button type="submit" class="btn btn-success" >Đặt Phòng</button>
                     </form>
