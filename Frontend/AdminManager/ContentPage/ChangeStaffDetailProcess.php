@@ -47,12 +47,13 @@ if (isset($_POST['SaveChange'])) {
     WHERE id = '$IDStaff' ";
     mysqli_query($mysqli, $sql_update);
     header(
-        'Location:../../indexForManager.php?manage=changeDetailStaff&IDStaff=' .$IDStaff
+       'Location:../../indexForManager.php?manage=managementStaff'
     );
 } elseif (isset($_POST['DeleteStaff'])) {
     $sql_delete = "DELETE FROM staff where id = '$IDStaff'";
     mysqli_query($mysqli, $sql_delete);
-    header('Location:../../indexForManager.php?=manage=ChangeDetailStaff.php');
+    header('Location:../../indexForManager.php?manage=managementStaff');
+
 } elseif (isset($_POST['AddStaff'])) {
     if (isset($_POST['phonenumber'])) {
         $phonenumber = $_POST['phonenumber'];

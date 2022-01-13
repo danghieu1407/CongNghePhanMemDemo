@@ -29,6 +29,6 @@ $query_staff = mysqli_query($mysqli, $sql_staff);
             <a href="indexForManager.php?manage=staffDetail&IDStaff=<?php echo $row_pro['id']; ?>" >Chỉnh sửa</a>
         </td>
     </tr>
+    <?php } ?>   
 
 </table>
- <?php } ?>   
