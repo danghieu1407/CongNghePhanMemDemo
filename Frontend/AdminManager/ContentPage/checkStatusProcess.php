@@ -30,6 +30,13 @@ else if(isset($_POST['nooneinthisroom'])){
     header('Location:../../indexForManager.php?manage=manageBookingRoom');
 
 }
+else if(isset($_POST['dangbaotri'])){
+    $sql_update = "UPDATE room SET
+    room.Status = '2' WHERE ID = $idroom";
+    mysqli_query($mysqli, $sql_update);
+    header('Location:../../indexForManager.php?manage=manageBookingRoom');
+
+}
 
 
 ?>

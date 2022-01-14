@@ -32,10 +32,12 @@ $query_room1 = mysqli_query($mysqli, $sql_room1);
                             'NumRoom'
                         ]; ?></h2>
         </a>
-        <a class="btn btn-success" href="indexForManager.php?manage=payment">Thanh Toán</a>
+        <a class="btn btn-success w-100" href="indexForManager.php?manage=payment">Thanh Toán</a>
         <form action="AdminManager/ContentPage/checkStatusProcess.php?idroom=<?php echo $row_pro['ID'] ?>" method="post">
-        <input class="btn btn-danger" type="submit" name="outOfRoom" value="Hết Phòng">
-        <input class="btn btn-primary" type="submit" name="nooneinthisroom" value="Còn Phòng">
+        <input class="btn btn-danger w-100" type="submit" name="outOfRoom" value="Hết Phòng">
+        <input class="btn btn-primary w-50 " type="submit" name="nooneinthisroom" value="Còn Phòng">
+        <input  class="btn btn-warning w-70" type="submit" name="dangbaotri" value="Đang bảo trì">
+
         </form>
 
 
@@ -83,12 +85,14 @@ $query_room1 = mysqli_query($mysqli, $sql_room1);
         </a>
      
         <form action="indexForManager.php?manage=payment&idroom=<?php echo $row_pro['ID'] ?>" method="post">
-        <input class="btn btn-success" type="submit" name="payment" value="Thanh Toán">
+        <input class="btn btn-success w-100" type="submit" name="payment" value="Thanh Toán">
 
         </form>
         <form action="AdminManager/ContentPage/checkStatusProcess.php?idroom=<?php echo $row_pro['ID'] ?>" method="post">
-        <input class="btn btn-danger" type="submit" name="outOfRoom" value="Hết Phòng">
-        <input class="btn btn-primary" type="submit" name="nooneinthisroom" value="Còn Phòng">
+        <input class="btn btn-danger w-100" type="submit" name="outOfRoom" value="Hết Phòng">
+        <input class="btn btn-primary w-50" type="submit" name="nooneinthisroom" value="Còn Phòng">
+        <input  class="btn btn-warning w-70" type="submit" name="dangbaotri" value="Đang bảo trì">
+        
         </form>
         <p class="tm-pt-30">
 
